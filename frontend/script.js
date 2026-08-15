@@ -13,7 +13,7 @@ const windSpeed = document.getElementById("windSpeed");
 const errorMessage = document.getElementById("errorMessage");
 const loading = document.getElementById("loading");
 
-const API_BASE_URL = "http://127.0.0.1:5000";
+const API_BASE_URL = "https://weather-api-1-frlt.onrender.com";
 
 async function getWeather(city) {
     try {
