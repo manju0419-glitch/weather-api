@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+
+    <main class="weather-app">
+
+        <header class="header">
+            <h1>Weather<span>ly</span></h1>
+            <p>Know your weather. Plan your day.</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name..."
+                    autocomplete="off"
+                >
+                <button id="searchButton">Search</button>
+            </div>
+        </section>
+
+        <p id="errorMessage" class="error-message"></p>
+        <section id="emptyState" class="empty-state">
+            <div class="empty-icon">🌤️</div>
+            <h2>Search for a city</h2>
+            <p>Get current weather details and a 5-day forecast</p>
+        </section>
+
+        <section id="currentWeather" class="weather-card">
+
+            <div class="weather-main">
+                <div>
+                    <p class="label">CURRENT WEATHER</p>
+                    <h2 id="cityName">Bangalore</h2>
+                    <p id="condition">Search for a city</p>
+                </div>
+
+                <div class="temperature">
+                    <span id="temperature">--</span><sup>°C</sup>
+                </div>
+            </div>
+
+            <div class="weather-details">
+
+                <div class="detail-card">
+                    <span class="detail-icon">🌡️</span>
+                    <div>
+                        <p>Feels like</p>
+                        <strong id="feelsLike">--°C</strong>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <span class="detail-icon">💧</span>
+                    <div>
+                        <p>Humidity</p>
+                        <strong id="humidity">--%</strong>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <span class="detail-icon">💨</span>
+                    <div>
+                        <p>Wind</p>
+                        <strong id="windSpeed">-- m/s</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="forecast-section">
+
+            <div class="section-heading">
+                <h2>5-Day Forecast</h2>
+                <p>What's coming next?</p>
+            </div>
+
+            <div id="forecastContainer" class="forecast-container">
+                <!-- Forecast cards will be created by JavaScript -->
+            </div>
+
+        </section>
+
+        <div id="loading" class="loading">
+            ✨ Updating weather...
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
